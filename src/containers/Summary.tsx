@@ -8,7 +8,7 @@ import {
     getRemovedPrimarySpouse,
     getRemovedAll,
 } from '../store/family/selectors';
-import Table from '../components/summary/Table';
+import Table from '../components/Summary/Table';
 
 const Summary: FC = () => {
     const primary = useSelector(getPrimary);

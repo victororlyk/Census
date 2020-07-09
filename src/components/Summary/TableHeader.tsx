@@ -4,11 +4,18 @@ import styled from 'styled-components';
 const Container = styled.div`
     display: flex;
     background-color: #b9d2ec;
+    border: 1px solid black;
 `;
 
 const Item = styled.span`
-    border: 1px solid black;
     width: 25%;
+    line-height: 1.5;
+    text-align: center;
+    padding: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 const TableHeader: FC = () => (
