@@ -31,17 +31,16 @@ const StyledLink = styled(NavLink)`
     }
 `;
 
-const Navigation: FC = () => {
-    return (
-        <Header>
-            <Nav>
-                {routes.map(({ name, url }) => (
-                    <StyledLink key={url} to={url}>
-                        {name}
-                    </StyledLink>
-                ))}
-            </Nav>
-        </Header>
-    );
-};
+const Navigation: FC = () => (
+    <Header>
+        <Nav>
+            {routes.map(({ name, url }) => (
+                <StyledLink key={url} to={url}>
+                    {name}
+                </StyledLink>
+            ))}
+        </Nav>
+    </Header>
+);
+
 export default Navigation;

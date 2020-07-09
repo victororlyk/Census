@@ -26,11 +26,11 @@ export interface getFamiliesFailureAction {
 
 export interface removeFamilyAction {
     type: typeof REMOVE_FAMILY;
-    payload: any;
+    payload: number;
 }
 export interface addFamilyAction {
     type: typeof ADD_FAMILY;
-    payload: any;
+    payload: number;
 }
 
 export type FamilyActionTypes =

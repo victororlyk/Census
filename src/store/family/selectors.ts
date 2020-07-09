@@ -11,7 +11,7 @@ const children = 'children';
 export const getLoading = (state: RootState) => state.FamilyReducer.loading;
 export const getFamilies = (state: RootState) => state.FamilyReducer.families;
 export const getPrimary = (state: RootState) =>
-    filter((family) => Object.keys(family).every((el) => [primary].includes(el)), state.FamilyReducer.families);
+    filter((family) => Object.keys(family).every((el) => [primary].includes(el)), state.FamilyReducer.families).length;
 
 export const getPrimarySpouce = (state: RootState) => {
     return filter((family) => {
@@ -19,7 +19,7 @@ export const getPrimarySpouce = (state: RootState) => {
         const spouseIncluded = includes(spouse, Object.keys(family));
         const childrenIncluded = includes(children, Object.keys(family));
         return !!(pmIncluded && spouseIncluded && !childrenIncluded);
-    }, state.FamilyReducer.families);
+    }, state.FamilyReducer.families).length;
 };
 
 export const getAll = (state: RootState) => {
@@ -28,7 +28,7 @@ export const getAll = (state: RootState) => {
         const spouseIncluded = includes(spouse, Object.keys(family));
         const childrenIncluded = includes(children, Object.keys(family));
         return !!(pmIncluded && spouseIncluded && childrenIncluded);
-    }, state.FamilyReducer.families);
+    }, state.FamilyReducer.families).length;
 };
 
 export const getRemoved = (state: RootState) => state.FamilyReducer.removed;
@@ -41,7 +41,7 @@ export const getRemovedPrimary = (state: RootState) => {
         const spouseIncluded = includes(spouse, Object.keys(family));
         const childrenIncluded = includes(children, Object.keys(family));
         return !!(pmIncluded && !spouseIncluded && !childrenIncluded && removed.includes(index));
-    }, state.FamilyReducer.families);
+    }, state.FamilyReducer.families).length;
 };
 
 export const getRemovedPrimarySpouse = (state: RootState) => {
@@ -52,7 +52,7 @@ export const getRemovedPrimarySpouse = (state: RootState) => {
         const spouseIncluded = includes(spouse, Object.keys(family));
         const childrenIncluded = includes(children, Object.keys(family));
         return !!(pmIncluded && spouseIncluded && !childrenIncluded && removed.includes(index));
-    }, state.FamilyReducer.families);
+    }, state.FamilyReducer.families).length;
 };
 
 export const getRemovedAll = (state: RootState) => {
@@ -63,5 +63,5 @@ export const getRemovedAll = (state: RootState) => {
         const spouseIncluded = includes(spouse, Object.keys(family));
         const childrenIncluded = includes(children, Object.keys(family));
         return !!(pmIncluded && spouseIncluded && childrenIncluded && removed.includes(index));
-    }, state.FamilyReducer.families);
+    }, state.FamilyReducer.families).length;
 };
