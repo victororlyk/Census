@@ -17,7 +17,6 @@ const Home: FC = () => {
     const dispatch = useDispatch();
 
     const toggleFamily = (i: number) => {
-        console.log('here  index', i);
         if (removed.includes(i)) {
             dispatch(removeFamily(i));
         } else {

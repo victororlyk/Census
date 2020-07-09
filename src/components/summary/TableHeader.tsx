@@ -11,15 +11,13 @@ const Item = styled.span`
     width: 25%;
 `;
 
-const TableHeader: FC = () => {
-    return (
-        <Container>
-            <Item>Status</Item>
-            <Item>Primary</Item>
-            <Item>Primary+Spouse</Item>
-            <Item>Primary + Spouse + Children</Item>
-        </Container>
-    );
-};
+const TableHeader: FC = () => (
+    <Container>
+        <Item>Status</Item>
+        <Item>Primary</Item>
+        <Item>Primary+Spouse</Item>
+        <Item>Primary + Spouse + Children</Item>
+    </Container>
+);
 
 export default TableHeader;

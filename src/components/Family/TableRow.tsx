@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Person } from '../../typeDefs';
+import { PersonType } from '../../typeDefs';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -13,7 +13,13 @@ const Item = styled.span`
         width: 5%;
     }
 `;
-const TableRow: FC<{ row: Person; type: string }> = ({ row, type }) => {
+
+type Props = {
+    row?: PersonType;
+    type?: string;
+};
+
+const TableRow: FC<Props> = ({ row, type }) => {
     return (
         <Container>
             <Item />

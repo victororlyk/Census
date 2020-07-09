@@ -1,4 +1,4 @@
-export type Person = {
+export type PersonType = {
     name: string;
     gender: string;
     age: number;
@@ -6,7 +6,7 @@ export type Person = {
 };
 
 export type FamilyType = {
-    primary: any;
-    spouse?: any;
-    children?: any[];
+    primary: PersonType;
+    spouse?: PersonType;
+    children?: PersonType[];
 };

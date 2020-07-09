@@ -23,12 +23,12 @@ export const getFamiliesFailure = (error: AxiosError): getFamiliesFailureAction 
     payload: error,
 });
 
-export const addFamily = (family: any): addFamilyAction => ({
+export const addFamily = (familyIndex: number): addFamilyAction => ({
     type: ADD_FAMILY,
-    payload: family,
+    payload: familyIndex,
 });
 
-export const removeFamily = (family: any): removeFamilyAction => ({
+export const removeFamily = (familyIndex: number): removeFamilyAction => ({
     type: REMOVE_FAMILY,
-    payload: family,
+    payload: familyIndex,
 });

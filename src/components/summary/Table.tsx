@@ -16,28 +16,26 @@ const Row = styled.div`
     display: flex;
 `;
 
-type Props = { data: any };
+type Props = { data: Record<string, number> };
 
 const Table: FC<Props> = ({
     data: { primary, primarySpouse, all, removedPrimary, removedPrimarySpouse, removedAll },
-}) => {
-    return (
-        <Container>
-            <TableHeader />
-            <Row>
-                <Item>Confirmed</Item>
-                <Item>{primary.length}</Item>
-                <Item>{primarySpouse.length}</Item>
-                <Item>{all.length}</Item>
-            </Row>
-            <Row>
-                <Item>Removed</Item>
-                <Item>{removedPrimary.length}</Item>
-                <Item>{removedPrimarySpouse.length}</Item>
-                <Item>{removedAll.length}</Item>
-            </Row>
-        </Container>
-    );
-};
+}) => (
+    <Container>
+        <TableHeader />
+        <Row>
+            <Item>Confirmed</Item>
+            <Item>{primary}</Item>
+            <Item>{primarySpouse}</Item>
+            <Item>{all}</Item>
+        </Row>
+        <Row>
+            <Item>Removed</Item>
+            <Item>{removedPrimary}</Item>
+            <Item>{removedPrimarySpouse}</Item>
+            <Item>{removedAll}</Item>
+        </Row>
+    </Container>
+);
 
 export default Table;
